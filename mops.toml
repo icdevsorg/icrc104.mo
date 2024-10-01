@@ -1,0 +1,25 @@
+[dependencies]
+base = "0.13.0"
+vector = "0.4.1"
+star = "0.1.1"
+account = "1.0.1"
+icrc3-mo = "0.2.6"
+map = "9.0.1"
+ic-certification = "0.1.3"
+timer-tool = "0.0.3"
+ovs-fixed = "0.1.2"
+candy = "0.3.0"
+icrc1-mo = "0.0.15"
+icrc10-mo = "0.0.1"
+icrc75-mo = "0.1.1"
+
+[dev-dependencies]
+test = "2.0.0"
+fuzz = "0.2.1"
+
+[package]
+name = "icrc104-mo"
+version = "0.0.1"
+description = "ICR-104 for motoko"
+repository = "https://github.com/icdevsorg/icrc104.mo"
+keywords = [ "icrc104", "rbac", "list", "rules" ]

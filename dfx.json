@@ -1,0 +1,16 @@
+{
+    "version": 1,
+    "canisters": {
+        "icrc104": {
+            "type": "motoko",
+            "main": "src/Canisters/Example.mo"
+        }
+    },
+    "defaults": {
+        "build": {
+            "packtool": "mops sources",
+            "args": ""
+        }
+    }
+    
+}
