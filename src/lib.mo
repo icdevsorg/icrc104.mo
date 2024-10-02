@@ -161,6 +161,14 @@ module {
         Vec.size(state.__fake_transactions) - 1;
       };
 
+      public func addAdmin(principal: Principal) : (){
+        ignore Set.put(state.admins, Set.phash, principal);
+      };
+
+      public func removeAdmin(principal: Principal) : (){
+        ignore Set.put(state.admins, Set.phash, principal);
+      };
+
       public func add_rule_handler_listener(name: Text, handler: RuleHandler, validator: ?RuleValidator) : Bool {
         ignore Map.put(ruleHandlerListeners, Map.thash, name, (handler, validator));
         true;
