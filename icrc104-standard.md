@@ -51,9 +51,9 @@
 
 #### Core Methods
 
-- **icrc104_apply_rules**
+- **icrc104_apply_rule**
 
-  Applies a set of rules from a specified namespace to a target membership list. This function evaluates the rules and performs necessary membership modifications based on the rule set. It returns the transactions that were performed. If the local **ICRC-104** canister does not keep a transaction log, it should refer to the **ICRC-75** transactions. If neither the **ICRC-104** canister nor the **ICRC-75** canister keeps a transaction log, specific changes can be returned in the `ICRC75Changes` variant.
+  Applies a rule from a specified namespace to a target membership list. This function evaluates the rules and performs necessary membership modifications based on the rule set. It returns the transactions that were performed. If the local **ICRC-104** canister does not keep a transaction log, it should refer to the **ICRC-75** transactions. If neither the **ICRC-104** canister nor the **ICRC-75** canister keeps a transaction log, specific changes can be returned in the `ICRC75Changes` variant.
 
   ```candid
   type List = text;
@@ -98,7 +98,7 @@
   
   service : {
       // Core Methods
-      icrc104_apply_rules: (record {
+      icrc104_apply_rule: (record {
           icrc75Canister: principal;
           target_list: List;                     // The list to apply rules on
           members: vec ListItem;                // Optional identity triggering the rule application
